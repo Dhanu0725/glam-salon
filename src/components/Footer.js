@@ -28,7 +28,7 @@ const Footer = () => {
                         <a href="https://www.instagram.com/theglamsalon_/" target="_blank" rel="noopener noreferrer">
                             <FontAwesomeIcon icon={faInstagram} size="2x" />
                         </a>
-                        <a href="mailto:https://www.gmail.com" target="_blank" rel="noopener noreferrer">
+                        <a href="mailto:theglamsalon.hyt@gmail.com" target="_blank" rel="noopener noreferrer">
                         <   FontAwesomeIcon icon={faGoogle} size="2x" />
                         </a>
                     </div>
