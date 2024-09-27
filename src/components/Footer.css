@@ -63,13 +63,40 @@
 }
 
 @media (max-width: 768px) {
-    .footer-content {
-        flex-direction: column; /* Stack sections on smaller screens */
-        align-items: center;
+    .footer {
+        padding: 10px; /* Reduced padding for mobile */
+        font-size: 14px; /* Adjust font size for better readability */
     }
 
-    .footer-content > div {
-        margin-right: 0;
-        margin-bottom: 20px;
+    .footer .contact-info {
+        display: flex; /* Use flexbox for better alignment */
+        flex-direction: column; /* Stack items vertically */
+        align-items: center; /* Center align items */
+        margin: 10px 0; /* Margin for spacing */
+    }
+
+    .footer .contact-info div {
+        margin-bottom: 5px; /* Space between items */
+    }
+
+    .follow-us {
+        margin-top: 10px; /* Space above Follow Us section */
+    }
+
+    .follow-us h4 {
+        margin-bottom: 5px; /* Space between heading and icons */
+    }
+
+    .footer .social-media {
+        display: flexbox; /* Flexbox for social media icons */
+        justify-content: center; /* Center align icons */
+        margin-top: 10px; /* Margin above social icons */
+        margin-left: -30px;
+    }
+
+    .footer .social-media a {
+        margin: 80px 5px; /* Space between social media icons */
+        text-decoration: none; /* Remove underline */
+        color: white; /* Icon color */
     }
 }

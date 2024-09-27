@@ -36,13 +36,13 @@ const Footer = () => {
                 </div>
                 <div className="working-hours">
                     <h3>Working Hours</h3>
-                    <p>Monday: 9 AM - 9 PM</p>
-                    <p>Tuesday: 9 AM - 9 PM</p>
-                    <p>Wednesday: 9 AM - 9 PM</p>
-                    <p>Thursday: 9 AM - 9 PM</p>
-                    <p>Friday: 9 AM - 9 PM</p>
-                    <p>Saturday: 9 AM - 9 PM</p>
-                    <p>Sunday: 9 AM - 9 PM</p>
+                    <p>Mon: 9 AM - 9 PM</p>
+                    <p>Tue: 9 AM - 9 PM</p>
+                    <p>Wed: 9 AM - 9 PM</p>
+                    <p>Thu: 9 AM - 9 PM</p>
+                    <p>Fri: 9 AM - 9 PM</p>
+                    <p>Sat: 9 AM - 9 PM</p>
+                    <p>Sun: 9 AM - 9 PM</p>
                 </div>
             </div>
         </footer>

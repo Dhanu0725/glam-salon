@@ -1,6 +1,6 @@
 import React, { useEffect, useRef, useState } from 'react';
 import AOS from 'aos';
-import 'aos/dist/aos.css'; 
+import 'aos/dist/aos.css';
 import './Home.css';
 import Footer from '../components/Footer';
 import background1 from '../assets/bg2.jpeg';
@@ -13,6 +13,7 @@ import serviceImage2 from '../assets/service2.jpg';
 import serviceImage3 from '../assets/service3.jpg';
 import serviceImage4 from '../assets/service4.jpg'; 
 import { Link, useLocation } from 'react-router-dom';
+import HamburgerMenu from '../components/HamburgerMenu';  // Add this import
 
 const slides = [
     { image: background1, text: 'STEP IN,<br />SIT AND RELAX', paragraph: 'Beauty is our passion. We will take care of everything.' },
@@ -29,14 +30,12 @@ const Home = () => {
     const location = useLocation();
 
     useEffect(() => {
-        // Initialize AOS
         AOS.init({
             duration: 1000,
             once: false
         });
     }, []);
 
-    // Set up auto-scrolling for background images
     useEffect(() => {
         const handleAutoScroll = () => {
             setCurrentIndex((prevIndex) => (prevIndex + 1) % slides.length);
@@ -50,16 +49,14 @@ const Home = () => {
     }, []);
 
     useEffect(() => {
-        // Scroll to About section if state is set
         if (location.state?.scrollToAbout) {
             setTimeout(() => {
                 if (aboutSectionRef.current) {
                     aboutSectionRef.current.scrollIntoView({ behavior: 'smooth' });
                 }
-            }, 100); // Delay to ensure the DOM is ready
+            }, 100);
         }
 
-        // Scroll to top if state is set for Home
         if (location.state?.scrollToHome) {
             window.scrollTo({ top: 0, behavior: 'smooth' });
         }
@@ -75,6 +72,9 @@ const Home = () => {
 
     return (
         <div className="home-container" id="home">
+            {/* Hamburger Menu for Mobile */}
+            <HamburgerMenu />
+
             {/* Background Image Slideshow */}
             <div className="background-image" style={{ backgroundImage: `url(${slides[currentIndex].image})` }}>
                 <div className="text-overlay text-left">

@@ -1,19 +1,30 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { Link, useNavigate } from 'react-router-dom';
 import './Header.css';
 import logo from '../assets/logo.png';
 
 const Header = () => {
+    const [isMenuOpen, setIsMenuOpen] = useState(false); // State for hamburger menu
     const navigate = useNavigate();
 
     const handleAboutClick = (e) => {
-        e.preventDefault(); // Prevent default link behavior
-        navigate('/', { state: { scrollToAbout: true } }); // Navigate to home with state
+        e.preventDefault(); 
+        navigate('/', { state: { scrollToAbout: true } }); 
+        closeMenu(); // Close the menu after clicking
     };
 
     const handleHomeClick = (e) => {
-        e.preventDefault(); // Prevent default link behavior
-        navigate('/', { state: { scrollToHome: true } }); // Navigate to home with state
+        e.preventDefault(); 
+        navigate('/', { state: { scrollToHome: true } }); 
+        closeMenu(); // Close the menu after clicking
+    };
+
+    const toggleMenu = () => {
+        setIsMenuOpen(!isMenuOpen); // Toggle the menu open/close
+    };
+
+    const closeMenu = () => {
+        setIsMenuOpen(false); // Function to close the menu
     };
 
     return (
@@ -38,7 +49,20 @@ const Header = () => {
                         <button className="book-button">Book Appointment</button>
                     </a>
                 </div>
+                {/* Hamburger Menu */}
+                <div className="hamburger-menu" onClick={toggleMenu}>
+                    &#9776; {/* Unicode for hamburger icon */}
+                </div>
             </div>
+            {/* Dropdown for mobile navigation */}
+            {isMenuOpen && (
+                <div className="mobile-menu">
+                    <Link to="/" onClick={handleHomeClick}>Home</Link>
+                    <Link to="/" onClick={handleAboutClick}>About</Link>
+                    <Link to="/services" onClick={closeMenu}>Services</Link>
+                    <Link to="/gallery" onClick={closeMenu}>Gallery</Link>
+                </div>
+            )}
         </header>
     );
 };

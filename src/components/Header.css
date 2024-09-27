@@ -5,6 +5,7 @@ header {
     padding: 15px 15px;
     position: sticky; /* Keeps header fixed on scroll */
     top: 0;
+    overflow: hidden;
     z-index: 1000; /* Ensure it stays on top */
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2); /* Optional shadow for visibility */
     width: 100%; /* Ensure header spans the full width */
@@ -42,6 +43,7 @@ header {
     display: flex; /* Use flexbox for links */
     justify-content: space-around; /* Space links evenly */
     align-items: center; /* Center items vertically */
+    margin-left: 500px;
 }
 
 .navbar a {
@@ -61,7 +63,7 @@ header {
 }
 
 .book-appointment {
-    margin-left: -500px;
+    margin-left: 15px; /* Adjust margin for spacing */
 }
 
 .book-button {
@@ -79,3 +81,66 @@ header {
 .book-button:hover {
     background-color: #9a7c41;
 }
+
+/* For mobile navigation (hamburger menu) */
+.hamburger-menu {
+    display: none; /* Hidden by default */
+    font-size: 30px; /* Size of hamburger icon */
+    cursor: pointer; /* Pointer cursor on hover */
+}
+
+/* For mobile view */
+@media (max-width: 768px) {
+    .navbar {
+        display: none; /* Hide regular menu */
+    }
+
+    .hamburger-menu {
+        display: block; /* Show hamburger icon */
+        position: absolute; /* Position it relative to the header */
+        top: 15px; /* Adjust as needed */
+        right: 15px; /* Adjust as needed */
+        z-index: 10; /* Ensure it appears above other elements */
+    }
+
+    .book-button {
+        padding: 5px 10px; /* Reduce padding for mobile */
+        font-size: 14px; /* Reduce font size for mobile */
+        white-space: normal; /* Allow wrapping of text */
+        text-align: center; /* Center the text */
+        line-height: 1.2; /* Adjust line height for better spacing */
+        max-width: 80px; /* Adjust as necessary */
+        margin-left: -180px;
+    }
+
+    .book-appointment {
+        margin-left: 0; /* Reset margin for mobile view */
+        text-align: center; /* Center the button */
+    }
+
+    .mobile-menu {
+        display: flex;
+        flex-direction: column; /* Stack links vertically */
+        background-color: #0b0b0b; /* Same background as header */
+        top: 50px; /* Adjust based on header height */
+        right: 0;
+        width: 100%; /* Full width */
+        z-index: 999; /* Above other elements */
+        padding: 10px 0; /* Add padding for spacing */
+        box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2); /* Optional shadow for visibility */
+    }
+    
+    .mobile-menu a {
+        padding: 10px; /* Spacing for links */
+        color: #7e6941; /* Link color */
+        text-align: center; /* Center text */
+        border-bottom: 1px solid #7e6941; /* Optional separator */
+        text-decoration: none; /* Remove underline */
+    }
+    
+    .mobile-menu a:hover {
+        background-color: #bf953f; /* Change background color on hover */
+        color: white; /* Change text color on hover */
+    }
+}    
+
