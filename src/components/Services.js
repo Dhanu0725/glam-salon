@@ -36,6 +36,8 @@ const Services = () => {
         if (location.state?.activeTab) {
             setActiveTab(location.state.activeTab);
         }
+        // Scroll to top when the component mounts
+        window.scrollTo(0, 0);
     }, [location.state]);
 
     const servicesData = {
@@ -86,6 +88,7 @@ const Services = () => {
     };
 
     const handleCategoryClick = (service) => {
+        // Pass the previous tab to maintain the state and navigate to the top of the catalog page
         navigate('/catalog', { state: { catalogImages: service.catalogImages, serviceName: service.name, previousTab: activeTab } });
     };
 
