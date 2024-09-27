@@ -1,0 +1,75 @@
+.footer {
+    background-color: #0e0e0e;
+    padding: 20px;
+    text-align: left;
+}
+
+.footer-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    flex-wrap: wrap;
+    margin-left: 150px;
+}
+
+.contact-info,
+.social-media,
+.working-hours {
+    margin-bottom: 20px;
+}
+
+.contact-info p,
+.working-hours p {
+    margin: 5px 0;
+    color: #7e6941;
+    font-style: italic;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+
+.contact-info a {
+    text-decoration: none; /* Removes underline from phone number */
+    color: white;
+}
+
+.contact-info a:hover {
+    text-decoration: none; /* Ensures no underline on hover */
+}
+
+/* Center social media icons */
+.social-media {
+    text-align: center;
+    margin: 0 auto; /* Centers the social media section */
+}
+
+.social-media a {
+    margin: 0 10px;
+    color: #e8dfdf;
+    size: 10px;
+}
+
+.social-media a:hover {
+    color: #ff6347; /* Changes icon color on hover */
+}
+
+.footer-logo {
+    margin-top: 70px; /* Add some space between Instagram icon and logo */
+    width: 200px; /* Adjust width according to the size you want */
+  }
+
+/* Add more spacing between sections */
+.footer-content > div {
+    flex: 1;
+    margin-right: 150px; /* Add space between the columns */
+}
+
+@media (max-width: 768px) {
+    .footer-content {
+        flex-direction: column; /* Stack sections on smaller screens */
+        align-items: center;
+    }
+
+    .footer-content > div {
+        margin-right: 0;
+        margin-bottom: 20px;
+    }
+}

@@ -1,0 +1,18 @@
+/* src/pages/About.css */
+
+.about-container {
+    padding: 4rem;
+    text-align: center;
+}
+
+.about-gallery {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.about-gallery img {
+    max-width: 30%;
+    margin: 1rem;
+    border-radius: 5px;
+}

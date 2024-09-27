@@ -1,0 +1,36 @@
+.video-modal {
+    position: fixed; /* Sticks the modal to the viewport */
+    top: 20px; /* Aligns to the top */
+    left: 0; /* Aligns to the left */
+    right: 0; /* Aligns to the right */
+    bottom: 0; /* Aligns to the bottom */
+    display: flex; /* Enables flexbox */
+    justify-content: center; /* Centers content horizontally */
+    align-items: center; /* Centers content vertically */
+    background-color: rgba(0, 0, 0, 0.8); /* Black background with opacity */
+    z-index: 1000; /* Ensures modal is above other elements */
+}
+
+.modal-video {
+    width: 80%; /* Responsive width */
+    max-width: 600px; /* Maximum width for larger screens */
+    max-height: 450px;
+    border-radius: 8px; /* Optional: Rounded corners */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Optional: Subtle shadow */
+}
+
+.close-button {
+    position: absolute;
+    top: 20px; /* Distance from top */
+    right: 20px; /* Distance from right */
+    background: none;
+    border: none;
+    color: white;
+    font-size: 30px; /* Size of the close icon */
+    cursor: pointer;
+    z-index: 1100; /* Ensure it is above the modal */
+}
+
+.close-button:hover {
+    color: red; /* Change color on hover */
+}

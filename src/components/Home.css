@@ -1,0 +1,265 @@
+.home-container {
+    position: relative;
+    background-color: #7e6941;
+    width: 100%;
+    height: 100vh;
+}
+
+.background-image {
+    position: relative;
+    width: 100%;
+    height: 88%;
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    filter: brightness(0.5);
+    transition: opacity 1s ease-in;
+}
+
+.text-overlay {
+    position: absolute;
+    top: 40%;
+    left: 10%;
+    transform: translateY(-50%);
+    color: white;
+    text-align: center;
+}
+
+.text-overlay h1 {
+    font-family: 'Dancing Script', Serif;
+    font-size: 2.0rem;
+    margin-bottom: 1rem;
+    line-height: 1.2;
+}
+
+.paragraph-overlay {
+    font-size: 1.2rem;
+    margin-top: 0.5rem; /* Ensures there's a small gap between the heading and the paragraph */
+    color: #fff;
+}
+
+.scroll-button {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: rgba(255, 255, 255, 0);
+    border: 2px solid rgba(255, 255, 255, 0.5);
+    border-radius: 50%;
+    width: 50px; /* Set a width */
+    height: 50px; /* Set a height */
+    display: flex;
+    justify-content: center; /* Center the icon horizontally */
+    align-items: center; /* Center the icon vertically */
+    transition: border-color 0.3s, transform 0.3s;
+    color: white;
+    border: none;
+    cursor: pointer;
+}
+
+.left {
+    left: 20px;
+}
+
+.right {
+    right: 20px;
+}
+
+.scroll-button p {
+    font-size: 24px; /* Font size for the character */
+    line-height: 1.5;
+    color: rgba(255, 255, 255, 0.8); /* Color for the character */
+    margin: 0; /* Remove default margin */
+}
+
+.pagination {
+    position: absolute;
+    bottom: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+}
+
+.dot {
+    height: 10px; /* Dot size */
+    width: 10px; /* Dot size */
+    margin: 85px 5px; /* Space between dots */
+    background-color: rgba(255, 255, 255, 0.5); /* Default dot color */
+    border-radius: 50%; /* Make it circular */
+    display: inline-block; /* Ensure the dot appears as a block */
+    transition: background-color 0.3s; /* Smooth transition for hover */
+    cursor: pointer; /* Pointer cursor on hover */
+}
+
+.dot.active {
+    background-color: rgba(255, 165, 0, 0.8); /* Active dot color */
+}
+
+.dot:hover {
+    background-color: rgba(255, 255, 255, 0.8); /* Dot color on hover */
+}
+
+.highlight{
+    color: #b18940;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-weight: 200;
+}
+
+.about-services-container {
+    display: flex;
+    gap: 50px;
+    padding: 40px 10%;
+}
+
+.about-us-container, .home-services-section {
+    width: 100%;
+    padding: 50px 20px; /* Adjust padding as needed */
+    box-sizing: border-box;
+    transition: transform 0.3s ease;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+/* Zoom-In Effect */
+.zoom-effect {
+    opacity: 0;
+    transform: scale(0.9);
+    transition: opacity 0.5s ease, transform 0.5s ease;
+}
+
+.zoom-effect.fade-in {
+    opacity: 1;
+    transform: scale(1);
+}
+
+.about-us-container:hover,
+.home-services-section:hover {
+    transform: scale(1.05); /* Scale up on hover */
+}
+
+.about-us-container {
+    background-image: url('../assets/bg10.jpeg');
+    background-size: cover;
+}
+
+.about-us-content {
+    margin-right: 20px; /* Add space between text and image */
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+
+.home-services-section {
+    background-image: url('../assets/bg9.jpeg');
+    background-size: cover;  
+    background-position: center; 
+    background-repeat: no-repeat;
+    padding: 50px 20px;
+}
+
+h2{
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+.services-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr); /* 2 images per row */
+    gap: 20px; /* Gap between images */
+    justify-items: center;
+}
+
+.services-preview {
+    display: flex;
+    justify-content: space-around;
+    margin-top: 20px; /* Adjust spacing as needed */
+    flex-wrap: wrap;
+}
+
+.service {
+    width: 100%; /* Adjust width for your layout */
+    margin-bottom: 20px; /* Space between services */
+    text-align: center; /* Center align text */
+    position: relative;
+    max-width: 800px; /* Set a max width for the service item */
+    height: 200px; /* Set a height for the service item */
+    border-radius: 10px;
+}
+
+.service-image {
+    width: 100%;
+    height: 100%; /* Ensure the image container takes the full height */
+}
+
+.service-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: filter 0.3s ease-in-out; /* Smooth transition for brightness */
+    border-radius: 10px;
+}
+
+.service-image:hover img {
+    filter: brightness(50%); /* Decrease brightness on hover */
+}
+
+.service-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    opacity: 0;
+    transition: opacity 0.3s ease-in-out; /* Smooth transition for text overlay */
+    background: rgba(0, 0, 0, 0.5); /* Dark overlay for contrast */
+    border-radius: 10px;
+}
+
+.service:hover .service-overlay {
+    opacity: 1; /* Show overlay on hover */
+}
+
+.service-overlay h3 {
+    color: white;
+    font-size: 24px;
+    text-align: center;
+}
+
+.see-more-btn {
+    margin-top: 20px;
+    padding: 10px 20px;
+    border: none;
+    background-color: #b08940;
+    margin-left: 160px;
+    color: rgb(11, 11, 11);
+    cursor: pointer;
+    transition: background-color 0.3s;
+    border-radius: 5px;
+}
+
+.learn-more-btn {
+    margin-top: 20px;
+    padding: 10px 20px;
+    border: none;
+    background-color: #b08940;
+    margin-left: 130px;
+    color: rgb(11, 11, 11);
+    cursor: pointer;
+    transition: background-color 0.3s;
+    border-radius: 5px;
+}
+
+.see-more-btn:hover,
+.learn-more-btn:hover {
+    background-color: #82642d;
+}
+
+.footer {
+    background-color: #1a1919; /* Change as needed */
+    color: #fff;
+    padding: 20px;
+    text-align: center;
+    margin-top: auto; /* Push footer to the bottom */
+    width: 100%;
+}
+

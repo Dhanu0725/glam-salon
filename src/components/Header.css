@@ -1,0 +1,81 @@
+@import url('https://fonts.googleapis.com/css2?family=Dancing+Script:wght@700&display=swap');
+
+header {
+    background-color: #0b0b0b; /* Example background color */
+    padding: 15px 15px;
+    position: sticky; /* Keeps header fixed on scroll */
+    top: 0;
+    z-index: 1000; /* Ensure it stays on top */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2); /* Optional shadow for visibility */
+    width: 100%; /* Ensure header spans the full width */
+}
+
+.header-container {
+    display: flex; /* Use flexbox for layout */
+    justify-content: space-between; /* Space out the logo and nav */
+    align-items: center; /* Center items vertically */
+    max-width: 1200px; /* Limit the width of the header */
+    margin: 0 auto; /* Center the header container */
+}
+
+.logo-container {
+    display: flex; /* Flexbox for logo and name */
+    align-items: center; /* Center items vertically */
+}
+
+.logo {
+    width: 70px; /* Adjust logo size */
+    height: auto; /* Maintain aspect ratio */
+    margin-right: 10px; /* Space between logo and name */
+}
+
+.salon-name {
+    font-family: 'Dancing Script', cursive;
+    font-size: 1.5rem; /* Adjust font size */
+    color: #7e6941; /* Text color */
+    text-transform: none; /* No text transformation for a classy appearance */
+    font-weight: 700; /* Bold weight */
+    letter-spacing: 1px; /* Subtle spacing for a refined look */
+}
+
+.navbar {
+    display: flex; /* Use flexbox for links */
+    justify-content: space-around; /* Space links evenly */
+    align-items: center; /* Center items vertically */
+}
+
+.navbar a {
+    text-decoration: none; /* Remove underline from links */
+    color: #7e6941; /* Text color */
+    margin: 0 15px; /* Space between links */
+    font-weight: bold; /* Make links bold */
+    transition: color 0.3s; /* Smooth transition for hover effect */
+    font-family: 'Dancing Script', cursive;
+    text-transform: none;
+    font-weight: 700;
+    letter-spacing: 1px;
+}
+
+.navbar a:hover {
+    color: #bf953f; /* Change color on hover */
+}
+
+.book-appointment {
+    margin-left: -500px;
+}
+
+.book-button {
+    background-color: #7e6941;
+    color: #0a0a0a;
+    padding: 10px 15px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    font-family: 'Dancing Script', cursive;
+    transition: background-color 0.3s ease;
+}
+
+.book-button:hover {
+    background-color: #9a7c41;
+}
