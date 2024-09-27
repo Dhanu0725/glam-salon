@@ -1,26 +1,40 @@
-// src/pages/About.js
-import React from 'react';
-import './About.css'; // Create this CSS file for styles
+import React, { useEffect } from 'react';
+import { useLocation } from 'react-router-dom';
+import './About.css'; 
+import ownerPhoto from '../assets/owner.jpg'; 
 
 const About = () => {
+    const location = useLocation();
+
+    // Update active tab based on previous navigation state
+    useEffect(() => {
+        // Scroll to top when the component mounts
+        window.scrollTo(0, 0);
+    }, [location.state]);
+
     return (
         <div className="about-container">
-            <h2>About Us</h2>
-            <p>Welcome to <strong>The Glam Salon</strong>, where style knows no boundaries! Our unisex salon is dedicated to providing a welcoming and inclusive environment for everyone.</p>
-            <p>Whether you’re looking for a fresh haircut, vibrant color, nail art, or a relaxing treatment, our talented team of stylists is here to bring your vision to life.</p>
-            <p>At Glam Salon, we believe that beauty is for all. Our experienced professionals stay up-to-date with the latest trends and techniques to ensure you receive the best service tailored to your unique style.</p>
-            <p>We prioritize your comfort and satisfaction, making every visit a rejuvenating experience. Join us for a pampering session, and let us help you express your individuality.</p>
-            <p>Discover your new favorite salon where every cut, color, and style reflects the real you!</p>
-
-            <div className="owner-stylist-container">
-                <img src="../assets/owner.jpg" alt="Owner" />
-                <img src="../assets/stylist.jpg" alt="Stylists" />
-            </div>
-
-            <div className="quotes">
-                <blockquote>"Beauty is not in the face; beauty is a light in the heart." - Kahlil Gibran</blockquote>
-                <blockquote>"Elegance is the only beauty that never fades." - Audrey Hepburn</blockquote>
-            </div>
+            <h1>About Us</h1>
+            <img src={ownerPhoto} alt="Owner" className="owner-photo" />
+            <h3><span className="highlight">Miss. Goureeshwari Obbineni</span></h3>
+            <p className="about-text">
+                Welcome to The Glam Salon! We are dedicated to providing you with the best beauty services.
+                Our owner, <span className="highlight">Goureeshwari Obbineni</span>, has years of experience in the fashion industry and is passionate about making 
+                everyone look and feel their best.
+            </p>
+            <blockquote className="quote">
+                "Beauty begins the moment you decide to be yourself." - Coco Chanel
+            </blockquote>
+            <blockquote className="quote">
+                "Invest in your hair, it’s the crown you never take off." - Unknown
+            </blockquote>
+            <p className="owner-info">
+            <span className="highlight">Goureeshwari Obbineni</span> has a vision of creating a welcoming space where everyone feels at home. With a team 
+                of skilled professionals, we offer a range of services tailored to your needs.
+            </p>
+            <h3> 
+                <span className="highlight">Kudos to our young entrepreneur!!</span>
+            </h3>
         </div>
     );
 };

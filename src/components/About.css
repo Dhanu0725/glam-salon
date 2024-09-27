@@ -1,18 +1,26 @@
-/* src/pages/About.css */
-
 .about-container {
-    padding: 4rem;
+    padding: 20px;
     text-align: center;
 }
 
-.about-gallery {
-    display: flex;
-    justify-content: center;
-    flex-wrap: wrap;
+.owner-photo {
+    width: 150px; /* Adjust size as needed */
+    border-radius: 50%; /* Optional: makes the image round */
+    margin: 20px 0;
 }
 
-.about-gallery img {
-    max-width: 30%;
-    margin: 1rem;
-    border-radius: 5px;
+.about-text {
+    font-size: 1.2em;
+    margin-bottom: 20px;
+}
+
+.quote {
+    font-style: italic;
+    color: #555;
+    margin: 10px 0;
+}
+
+.owner-info {
+    margin-top: 20px;
+    font-size: 1.1em;
 }
